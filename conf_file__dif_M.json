@@ -1,13 +1,10 @@
-{'file_path': './lambda=0.01/N_lat=64/',
+{'file_path': './Results/',
 'hot_start': True,
 'N_sweep': 100200,
 'N_sep': 1,
 'N_max_leap': 101,
 'epsilon_leap': 0.01,
 'M': 0.02,
-'M_min': 0.01,
-'M_max': 0.2,
-'N_M': 191,
 'phi_max': 3,
 'N_int_dis': 200,
 'N_bins': 10,
@@ -20,4 +17,3 @@
 'dict_O_plot_boolean': {'phi': False, 'phi^2': False},
 'dict_O_plot_names': {'phi': '$<\phi>$', 'phi^2': '$<\phi^2>$'},
 'dict_O_dependance':{'phi': 'None','phi^2': 'None'}}
-

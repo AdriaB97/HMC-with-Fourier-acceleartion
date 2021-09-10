@@ -134,6 +134,24 @@ def total_eng_temp_av(x):
     
     return np.average(kin(phi,phi_tau_next,phi_x_next) + pot(phi,m,lambd))
 
+#This function computes the time-sliced two-point function.
+
+def time_sliced_two_point_func(lat_phi,N_lat):
+
+    #Create a 1D empty array with size N_lat.
+            
+    two_point_results = np.zeros(N_lat)
+    
+    #Use a for to go through different time coordinates.
+    
+    for n_time_meas in range(N_lat):
+        
+        lat_phi_roll = np.roll(lat_phi,n_time_meas,axis=0)
+        
+        two_point_results[n_time_meas] = np.average(lat_phi*(np.sum(lat_phi_roll,axis=1)[:, None]))
+
+    return two_point_results
+
 #This function computes the bimodality of the distribution of fields.
     
 def bimodality(data_phi):
